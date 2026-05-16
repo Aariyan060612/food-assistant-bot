@@ -15,8 +15,8 @@ import os
 import base64
 
 # 2. Configure Layout and Header
-st.set_page_config(page_title="AI Sous Chef", page_icon="🍳", layout="centered")
-st.title("🍳 Groq AI Sous Chef Bot")
+st.set_page_config(page_title="ChefGPT", layout="centered")
+st.title("ChefGPT (BETA)")
 st.write("Type a dish name or drop an image of food below, and I'll walk you through how to cook it!")
 
 # 3. CRITICAL FIX: Initialize Session State for the API Key so it doesn't vanish
@@ -54,8 +54,8 @@ if st.session_state.api_key:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
     # Trigger analysis when user submits an input
-    if st.button("Get Recipe & Instructions 🚀"):
-        with st.spinner("Thinking... Chef Bot is writing your recipe! 🥣"):
+    if st.button("Get Recipe & Instructions "):
+        with st.spinner("Thinking... Chef Bot is writing your recipe!"):
             try:
                 messages = []
                 
